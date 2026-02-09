@@ -16,6 +16,12 @@ Personal post-install scripts for a fresh Ubuntu 24 + GNOME setup. See README.md
    # then: cp "$REPO_DIR/configs/<file>" ~/destination
    ```
 
+7. For `.deb` installs, use `sudo apt install -y /tmp/file.deb` (not `dpkg -i`) — apt resolves missing dependencies automatically.
+8. For GitHub-hosted tools, fetch the latest version dynamically from the API rather than hardcoding:
+   ```bash
+   VERSION=$(wget -qO- https://api.github.com/repos/OWNER/REPO/releases/latest | grep -oP '"tag_name":\s*"v\K[^"]+')
+   ```
+
 ## Adding a new script
 
 1. Create `scripts/install-<tool>.sh` or `scripts/setup-<thing>.sh` following conventions above
