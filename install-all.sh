@@ -17,6 +17,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-1password.sh
 ./install-ghostty.sh
 ./install-slack.sh
+./install-gitify.sh
 
 echo ""
 echo "All done! Remaining manual steps:"

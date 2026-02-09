@@ -17,6 +17,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
 | `install-slack.sh` | Installs Slack via apt repo |
+| `install-gitify.sh` | Installs Gitify (GitHub notifications) via .deb |
 
 ## Project structure
 
@@ -34,7 +35,8 @@ ubuntu-supplement/
 │   ├── install-chrome.sh
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
-│   └── install-slack.sh
+│   ├── install-slack.sh
+│   └── install-gitify.sh
 └── configs/
     ├── starship.toml       # Starship prompt theme
     └── XCompose            # Dead key overrides for Portuguese
@@ -64,7 +66,7 @@ Each script is idempotent and can be run on its own:
 ## Notes
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
-- Desktop apps (Chrome, 1Password, Ghostty, Slack) require `sudo` for apt/dpkg
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify) require `sudo` for apt/dpkg
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
 - The Starship config uses [Nerd Font](https://www.nerdfonts.com/) glyphs — make sure your terminal uses one
 
@@ -78,3 +80,4 @@ Desktop app installation methods change frequently. If a script fails, check the
 | 1Password | [support.1password.com](https://support.1password.com/install-linux/#get-1password-for-linux) |
 | Ghostty | [github.com/mkasberg/ghostty-ubuntu](https://github.com/mkasberg/ghostty-ubuntu) |
 | Slack | [slack.com/downloads/linux](https://slack.com/downloads/linux) |
+| Gitify | [github.com/gitify-app/gitify](https://github.com/gitify-app/gitify/releases) |
