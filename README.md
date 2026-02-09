@@ -18,6 +18,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
 | `install-slack.sh` | Installs Slack via apt repo |
 | `install-gitify.sh` | Installs Gitify (GitHub notifications) via .deb |
+| `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
 
@@ -36,7 +37,8 @@ ubuntu-supplement/
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
 │   ├── install-slack.sh
-│   └── install-gitify.sh
+│   ├── install-gitify.sh
+│   └── setup-autostart.sh
 └── configs/
     ├── starship.toml       # Starship prompt theme
     └── XCompose            # Dead key overrides for Portuguese

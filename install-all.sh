@@ -19,6 +19,9 @@ cd "$SCRIPT_DIR/scripts"
 ./install-slack.sh
 ./install-gitify.sh
 
+# Autostart configuration (after apps are installed)
+./setup-autostart.sh
+
 echo ""
 echo "All done! Remaining manual steps:"
 echo "  1. Run 'gh auth login -p ssh' to authenticate with GitHub"
