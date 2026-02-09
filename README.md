@@ -13,6 +13,10 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `setup-starship.sh` | Installs Starship prompt with a custom theme |
 | `install-nvm.sh` | Installs NVM + Node.js LTS (set as default) |
 | `install-bun.sh` | Installs the Bun JavaScript runtime |
+| `install-chrome.sh` | Installs Google Chrome (not Chromium) via .deb |
+| `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
+| `install-ghostty.sh` | Installs the Ghostty terminal emulator |
+| `install-slack.sh` | Installs Slack via apt repo |
 
 ## Project structure
 
@@ -26,7 +30,11 @@ ubuntu-supplement/
 │   ├── setup-keyboard.sh
 │   ├── setup-starship.sh
 │   ├── install-nvm.sh
-│   └── install-bun.sh
+│   ├── install-bun.sh
+│   ├── install-chrome.sh
+│   ├── install-1password.sh
+│   ├── install-ghostty.sh
+│   └── install-slack.sh
 └── configs/
     ├── starship.toml       # Starship prompt theme
     └── XCompose            # Dead key overrides for Portuguese
@@ -55,6 +63,18 @@ Each script is idempotent and can be run on its own:
 
 ## Notes
 
-- No `sudo` required — everything installs to user-space (`~/.local/bin`, `~/.nvm`, `~/.bun`)
+- Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
+- Desktop apps (Chrome, 1Password, Ghostty, Slack) require `sudo` for apt/dpkg
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
 - The Starship config uses [Nerd Font](https://www.nerdfonts.com/) glyphs — make sure your terminal uses one
+
+## Troubleshooting desktop apps
+
+Desktop app installation methods change frequently. If a script fails, check the official docs:
+
+| App | Official install docs |
+|---|---|
+| Google Chrome | [support.google.com](https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Clinux) |
+| 1Password | [support.1password.com](https://support.1password.com/install-linux/#get-1password-for-linux) |
+| Ghostty | [github.com/mkasberg/ghostty-ubuntu](https://github.com/mkasberg/ghostty-ubuntu) |
+| Slack | [slack.com/downloads/linux](https://slack.com/downloads/linux) |

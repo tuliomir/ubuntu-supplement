@@ -3,6 +3,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR/scripts"
 
+# User-space tools (no sudo)
 ./setup-ssh.sh
 ./install-gh.sh
 ./setup-git.sh
@@ -10,6 +11,12 @@ cd "$SCRIPT_DIR/scripts"
 ./setup-starship.sh
 ./install-nvm.sh
 ./install-bun.sh
+
+# Desktop apps (sudo required)
+./install-chrome.sh
+./install-1password.sh
+./install-ghostty.sh
+./install-slack.sh
 
 echo ""
 echo "All done! Remaining manual steps:"
