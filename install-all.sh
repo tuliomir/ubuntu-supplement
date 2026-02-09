@@ -11,6 +11,8 @@ cd "$SCRIPT_DIR/scripts"
 ./setup-starship.sh
 ./install-nvm.sh
 ./install-bun.sh
+./install-claude-code.sh
+./install-opencode.sh
 
 # Desktop apps (sudo required)
 ./install-chrome.sh

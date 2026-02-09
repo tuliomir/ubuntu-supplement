@@ -13,6 +13,8 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `setup-starship.sh` | Installs Starship prompt with a custom theme |
 | `install-nvm.sh` | Installs NVM + Node.js LTS (set as default) |
 | `install-bun.sh` | Installs the Bun JavaScript runtime |
+| `install-claude-code.sh` | Installs Claude Code CLI (native installer, auto-updates) |
+| `install-opencode.sh` | Installs OpenCode CLI |
 | `install-chrome.sh` | Installs Google Chrome (not Chromium) via .deb |
 | `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
@@ -33,6 +35,8 @@ ubuntu-supplement/
 │   ├── setup-starship.sh
 │   ├── install-nvm.sh
 │   ├── install-bun.sh
+│   ├── install-claude-code.sh
+│   ├── install-opencode.sh
 │   ├── install-chrome.sh
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
@@ -83,3 +87,5 @@ Desktop app installation methods change frequently. If a script fails, check the
 | Ghostty | [github.com/mkasberg/ghostty-ubuntu](https://github.com/mkasberg/ghostty-ubuntu) |
 | Slack | [slack.com/downloads/linux](https://slack.com/downloads/linux) |
 | Gitify | [github.com/gitify-app/gitify](https://github.com/gitify-app/gitify/releases) |
+| Claude Code | [code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup) |
+| OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |
