@@ -13,6 +13,8 @@ fi
 
 echo "Installing Dropbox..."
 
+sudo apt install -y python3-gpg
+
 DROPBOX_VERSION=$(wget -qO- https://linux.dropbox.com/packages/ubuntu/ | grep -oP 'dropbox_\K[0-9.]+(?=_amd64\.deb)' | sort -V | tail -1)
 echo "Latest version: $DROPBOX_VERSION"
 
@@ -20,4 +22,5 @@ wget -q -O /tmp/dropbox.deb "https://linux.dropbox.com/packages/ubuntu/dropbox_$
 sudo apt install -y /tmp/dropbox.deb
 rm -f /tmp/dropbox.deb
 
-echo "Dropbox installed. Run 'dropbox start -i' to launch and sign in."
+echo "Dropbox installed. Starting Dropbox in the background..."
+dropbox start -i &
