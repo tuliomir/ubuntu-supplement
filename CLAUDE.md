@@ -25,6 +25,10 @@ Personal post-install scripts for a fresh Ubuntu 24 + GNOME setup. See README.md
    ```bash
    VERSION=$(wget -qO- https://example.com/packages/ | grep -oP 'tool_\K[0-9.]+(?=_amd64\.deb)' | sort -V | tail -1)
    ```
+10. For Python CLI tools, install via `pipx` (which isolates each tool in its own venv):
+    ```bash
+    pipx install <package-name>
+    ```
 
 ## Adding a new script
 

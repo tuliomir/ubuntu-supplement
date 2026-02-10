@@ -35,6 +35,7 @@ set_hotkey() {
 
 set_hotkey "file-browser" "Open Downloads folder" "nautilus $HOME/Downloads" "<Super>e"
 set_hotkey "text-editor"  "Open text editor"       "gnome-text-editor"        "<Super>r"
+set_hotkey "sublime-text" "Open Sublime Text"      "subl"                     "<Super><Shift>r"
 
 gsettings set "$SCHEMA" custom-keybindings "$CURRENT"
 

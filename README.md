@@ -10,12 +10,14 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-gh.sh` | Installs the GitHub CLI (`gh`) to `~/.local/bin` |
 | `setup-git.sh` | Sets `pull.rebase = true` globally |
 | `setup-keyboard.sh` | US International dead keys + `' + c` = `ç` via XCompose |
-| `setup-hotkeys.sh` | Custom hotkeys: `Super+E` → Downloads folder, `Super+R` → text editor |
+| `setup-hotkeys.sh` | Custom hotkeys: `Super+E` → Downloads, `Super+R` → text editor, `Super+Shift+R` → Sublime Text |
 | `setup-starship.sh` | Installs Starship prompt with a custom theme |
 | `install-nvm.sh` | Installs NVM + Node.js LTS (set as default) |
 | `install-bun.sh` | Installs the Bun JavaScript runtime |
 | `install-claude-code.sh` | Installs Claude Code CLI (native installer, auto-updates) |
 | `install-opencode.sh` | Installs OpenCode CLI |
+| `setup-python.sh` | Installs pipx and python3-venv (Python CLI tool foundation) |
+| `install-gallery-dl.sh` | Installs gallery-dl image/video downloader via pipx |
 | `install-chrome.sh` | Installs Google Chrome (not Chromium) via .deb |
 | `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
@@ -23,6 +25,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-gitify.sh` | Installs Gitify (GitHub notifications) via .deb |
 | `install-obsidian.sh` | Installs Obsidian note-taking app via .deb |
 | `install-dropbox.sh` | Installs Dropbox via .deb (Ubuntu 22.10+ version) |
+| `install-sublime-text.sh` | Installs Sublime Text via apt repo |
 | `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
@@ -41,6 +44,8 @@ ubuntu-supplement/
 │   ├── install-bun.sh
 │   ├── install-claude-code.sh
 │   ├── install-opencode.sh
+│   ├── setup-python.sh
+│   ├── install-gallery-dl.sh
 │   ├── install-chrome.sh
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
@@ -48,6 +53,7 @@ ubuntu-supplement/
 │   ├── install-gitify.sh
 │   ├── install-obsidian.sh
 │   ├── install-dropbox.sh
+│   ├── install-sublime-text.sh
 │   └── setup-autostart.sh
 └── configs/
     ├── starship.toml       # Starship prompt theme
@@ -78,7 +84,8 @@ Each script is idempotent and can be run on its own:
 ## Notes
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
-- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox) require `sudo` for apt/dpkg
+- Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text) require `sudo` for apt/dpkg
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
 - The Starship config uses [Nerd Font](https://www.nerdfonts.com/) glyphs — make sure your terminal uses one
 
@@ -95,5 +102,6 @@ Desktop app installation methods change frequently. If a script fails, check the
 | Gitify | [github.com/gitify-app/gitify](https://github.com/gitify-app/gitify/releases) |
 | Obsidian | [obsidian.md/download](https://obsidian.md/download) |
 | Dropbox | [dropbox.com/install-linux](https://www.dropbox.com/install-linux) |
+| Sublime Text | [sublimetext.com/docs/linux_repositories](https://www.sublimetext.com/docs/linux_repositories.html#apt) |
 | Claude Code | [code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup) |
 | OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |

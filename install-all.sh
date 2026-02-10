@@ -14,6 +14,8 @@ cd "$SCRIPT_DIR/scripts"
 ./install-bun.sh
 ./install-claude-code.sh
 ./install-opencode.sh
+./setup-python.sh
+./install-gallery-dl.sh
 
 # Desktop apps (sudo required)
 ./install-chrome.sh
@@ -23,6 +25,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-gitify.sh
 ./install-obsidian.sh
 ./install-dropbox.sh
+./install-sublime-text.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh
