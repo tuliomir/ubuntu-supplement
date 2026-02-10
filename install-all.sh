@@ -22,6 +22,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-slack.sh
 ./install-gitify.sh
 ./install-obsidian.sh
+./install-dropbox.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh
