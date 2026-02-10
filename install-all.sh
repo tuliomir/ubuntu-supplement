@@ -8,6 +8,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-gh.sh
 ./setup-git.sh
 ./setup-keyboard.sh
+./setup-hotkeys.sh
 ./setup-starship.sh
 ./install-nvm.sh
 ./install-bun.sh
@@ -20,6 +21,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-ghostty.sh
 ./install-slack.sh
 ./install-gitify.sh
+./install-obsidian.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh

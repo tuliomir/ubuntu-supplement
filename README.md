@@ -10,6 +10,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-gh.sh` | Installs the GitHub CLI (`gh`) to `~/.local/bin` |
 | `setup-git.sh` | Sets `pull.rebase = true` globally |
 | `setup-keyboard.sh` | US International dead keys + `' + c` = `ç` via XCompose |
+| `setup-hotkeys.sh` | Custom hotkeys: `Super+E` → Downloads folder, `Super+R` → text editor |
 | `setup-starship.sh` | Installs Starship prompt with a custom theme |
 | `install-nvm.sh` | Installs NVM + Node.js LTS (set as default) |
 | `install-bun.sh` | Installs the Bun JavaScript runtime |
@@ -20,6 +21,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
 | `install-slack.sh` | Installs Slack via apt repo |
 | `install-gitify.sh` | Installs Gitify (GitHub notifications) via .deb |
+| `install-obsidian.sh` | Installs Obsidian note-taking app via .deb |
 | `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
@@ -32,6 +34,7 @@ ubuntu-supplement/
 │   ├── install-gh.sh
 │   ├── setup-git.sh
 │   ├── setup-keyboard.sh
+│   ├── setup-hotkeys.sh
 │   ├── setup-starship.sh
 │   ├── install-nvm.sh
 │   ├── install-bun.sh
@@ -42,6 +45,7 @@ ubuntu-supplement/
 │   ├── install-ghostty.sh
 │   ├── install-slack.sh
 │   ├── install-gitify.sh
+│   ├── install-obsidian.sh
 │   └── setup-autostart.sh
 └── configs/
     ├── starship.toml       # Starship prompt theme
@@ -72,7 +76,7 @@ Each script is idempotent and can be run on its own:
 ## Notes
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
-- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify) require `sudo` for apt/dpkg
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian) require `sudo` for apt/dpkg
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
 - The Starship config uses [Nerd Font](https://www.nerdfonts.com/) glyphs — make sure your terminal uses one
 
@@ -87,5 +91,6 @@ Desktop app installation methods change frequently. If a script fails, check the
 | Ghostty | [github.com/mkasberg/ghostty-ubuntu](https://github.com/mkasberg/ghostty-ubuntu) |
 | Slack | [slack.com/downloads/linux](https://slack.com/downloads/linux) |
 | Gitify | [github.com/gitify-app/gitify](https://github.com/gitify-app/gitify/releases) |
+| Obsidian | [obsidian.md/download](https://obsidian.md/download) |
 | Claude Code | [code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup) |
 | OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |
