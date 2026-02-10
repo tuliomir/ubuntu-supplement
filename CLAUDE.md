@@ -21,12 +21,16 @@ Personal post-install scripts for a fresh Ubuntu 24 + GNOME setup. See README.md
    ```bash
    VERSION=$(wget -qO- https://api.github.com/repos/OWNER/REPO/releases/latest | grep -oP '"tag_name":\s*"v\K[^"]+')
    ```
+9. For non-GitHub package servers with directory listings, parse the listing for the latest version:
+   ```bash
+   VERSION=$(wget -qO- https://example.com/packages/ | grep -oP 'tool_\K[0-9.]+(?=_amd64\.deb)' | sort -V | tail -1)
+   ```
 
 ## Adding a new script
 
 1. Create `scripts/install-<tool>.sh` or `scripts/setup-<thing>.sh` following conventions above
 2. Add the `./` line to `install-all.sh`
-3. Add a row to the table in `README.md`
+3. Update `README.md`: table row, project structure tree, notes list, and troubleshooting table (for desktop apps)
 4. If config files are needed, add them to `configs/`
 5. For desktop apps with changing install methods, add a comment at the top of the script with the official docs URL
 
