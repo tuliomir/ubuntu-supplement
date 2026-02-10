@@ -18,6 +18,8 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-opencode.sh` | Installs OpenCode CLI |
 | `setup-python.sh` | Installs pipx and python3-venv (Python CLI tool foundation) |
 | `install-gallery-dl.sh` | Installs gallery-dl image/video downloader via pipx |
+| `setup-jetbrains-env.sh` | Fixes dead keys in JetBrains IDEs (env vars + wrapper + desktop entry patches) |
+| `install-jetbrains-toolbox.sh` | Installs JetBrains Toolbox to `~/.local/lib/` (use it to install WebStorm, IntelliJ, etc.) |
 | `install-chrome.sh` | Installs Google Chrome (not Chromium) via .deb |
 | `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
@@ -46,6 +48,8 @@ ubuntu-supplement/
 │   ├── install-opencode.sh
 │   ├── setup-python.sh
 │   ├── install-gallery-dl.sh
+│   ├── setup-jetbrains-env.sh
+│   ├── install-jetbrains-toolbox.sh
 │   ├── install-chrome.sh
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
@@ -55,9 +59,11 @@ ubuntu-supplement/
 │   ├── install-dropbox.sh
 │   ├── install-sublime-text.sh
 │   └── setup-autostart.sh
-└── configs/
-    ├── starship.toml       # Starship prompt theme
-    └── XCompose            # Dead key overrides for Portuguese
+├── configs/
+│   ├── starship.toml       # Starship prompt theme
+│   └── XCompose            # Dead key overrides for Portuguese
+└── knowledge/
+    └── jetbrains-installation.md  # Why Toolbox over Snap (dead keys)
 ```
 
 ## Usage
@@ -86,8 +92,18 @@ Each script is idempotent and can be run on its own:
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
 - Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
 - Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text) require `sudo` for apt/dpkg
+- JetBrains IDEs (WebStorm, IntelliJ, etc.) are installed via Toolbox, **not** snap — snap has environment isolation issues that break dead keys with `us+intl` layout (see [knowledge/jetbrains-installation.md](knowledge/jetbrains-installation.md))
+- After Toolbox is installed, re-run `setup-jetbrains-env.sh` to patch its `.desktop` entries to use the dead keys wrapper
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
 - The Starship config uses [Nerd Font](https://www.nerdfonts.com/) glyphs — make sure your terminal uses one
+
+## Knowledge base
+
+Decision records and debugging notes for non-obvious choices in this setup:
+
+| File | Topic |
+|------|-------|
+| [jetbrains-installation.md](knowledge/jetbrains-installation.md) | Why Toolbox instead of Snap, and how the dead keys fix works |
 
 ## Troubleshooting desktop apps
 
@@ -105,3 +121,4 @@ Desktop app installation methods change frequently. If a script fails, check the
 | Sublime Text | [sublimetext.com/docs/linux_repositories](https://www.sublimetext.com/docs/linux_repositories.html#apt) |
 | Claude Code | [code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup) |
 | OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |
+| JetBrains Toolbox | [jetbrains.com/toolbox-app](https://www.jetbrains.com/toolbox-app/) |

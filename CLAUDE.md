@@ -38,6 +38,10 @@ Personal post-install scripts for a fresh Ubuntu 24 + GNOME setup. See README.md
 4. If config files are needed, add them to `configs/`
 5. For desktop apps with changing install methods, add a comment at the top of the script with the official docs URL
 
+## Knowledge base
+
+The `knowledge/` folder contains decision records explaining non-obvious choices (e.g., why Toolbox over Snap). When a script's approach needs justification beyond a code comment, write a markdown file in `knowledge/` and link it from the README's "Knowledge base" table.
+
 ## Modifying an existing script
 
 1. Read the script in `scripts/` first. Keep changes idempotent.

@@ -16,6 +16,8 @@ cd "$SCRIPT_DIR/scripts"
 ./install-opencode.sh
 ./setup-python.sh
 ./install-gallery-dl.sh
+./setup-jetbrains-env.sh
+./install-jetbrains-toolbox.sh
 
 # Desktop apps (sudo required)
 ./install-chrome.sh
