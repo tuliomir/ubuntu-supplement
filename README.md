@@ -29,6 +29,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-dropbox.sh` | Installs Dropbox via .deb (Ubuntu 22.10+ version) |
 | `install-sublime-text.sh` | Installs Sublime Text via apt repo |
 | `install-copyq.sh` | Installs CopyQ clipboard manager via PPA |
+| `install-docker.sh` | Installs Docker Engine and Docker Compose v2, adds user to `docker` group |
 | `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
@@ -60,6 +61,7 @@ ubuntu-supplement/
 │   ├── install-dropbox.sh
 │   ├── install-sublime-text.sh
 │   ├── install-copyq.sh
+│   ├── install-docker.sh
 │   └── setup-autostart.sh
 ├── configs/
 │   ├── starship.toml       # Starship prompt theme
@@ -94,7 +96,8 @@ Each script is idempotent and can be run on its own:
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
 - Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
-- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ) require `sudo` for apt/dpkg
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ) and Docker require `sudo` for apt/dpkg
+- Docker requires a **re-login** after install for the `docker` group to take effect
 - JetBrains IDEs (WebStorm, IntelliJ, etc.) are installed via Toolbox, **not** snap — snap has environment isolation issues that break dead keys with `us+intl` layout (see [knowledge/jetbrains-installation.md](knowledge/jetbrains-installation.md))
 - After Toolbox is installed, re-run `setup-jetbrains-env.sh` to patch its `.desktop` entries to use the dead keys wrapper
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
@@ -126,4 +129,5 @@ Desktop app installation methods change frequently. If a script fails, check the
 | CopyQ | [copyq.readthedocs.io](https://copyq.readthedocs.io/en/latest/installation.html) |
 | Claude Code | [code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup) |
 | OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |
+| Docker | [docs.docker.com/engine/install/ubuntu](https://docs.docker.com/engine/install/ubuntu/) |
 | JetBrains Toolbox | [jetbrains.com/toolbox-app](https://www.jetbrains.com/toolbox-app/) |
