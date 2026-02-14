@@ -28,6 +28,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-obsidian.sh` | Installs Obsidian note-taking app via .deb |
 | `install-dropbox.sh` | Installs Dropbox via .deb (Ubuntu 22.10+ version) |
 | `install-sublime-text.sh` | Installs Sublime Text via apt repo |
+| `install-copyq.sh` | Installs CopyQ clipboard manager via PPA |
 | `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
@@ -58,6 +59,7 @@ ubuntu-supplement/
 │   ├── install-obsidian.sh
 │   ├── install-dropbox.sh
 │   ├── install-sublime-text.sh
+│   ├── install-copyq.sh
 │   └── setup-autostart.sh
 ├── configs/
 │   ├── starship.toml       # Starship prompt theme
@@ -91,7 +93,7 @@ Each script is idempotent and can be run on its own:
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
 - Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
-- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text) require `sudo` for apt/dpkg
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ) require `sudo` for apt/dpkg
 - JetBrains IDEs (WebStorm, IntelliJ, etc.) are installed via Toolbox, **not** snap — snap has environment isolation issues that break dead keys with `us+intl` layout (see [knowledge/jetbrains-installation.md](knowledge/jetbrains-installation.md))
 - After Toolbox is installed, re-run `setup-jetbrains-env.sh` to patch its `.desktop` entries to use the dead keys wrapper
 - The keyboard setup targets GNOME on Ubuntu (uses `gsettings`)
@@ -119,6 +121,7 @@ Desktop app installation methods change frequently. If a script fails, check the
 | Obsidian | [obsidian.md/download](https://obsidian.md/download) |
 | Dropbox | [dropbox.com/install-linux](https://www.dropbox.com/install-linux) |
 | Sublime Text | [sublimetext.com/docs/linux_repositories](https://www.sublimetext.com/docs/linux_repositories.html#apt) |
+| CopyQ | [copyq.readthedocs.io](https://copyq.readthedocs.io/en/latest/installation.html) |
 | Claude Code | [code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup) |
 | OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |
 | JetBrains Toolbox | [jetbrains.com/toolbox-app](https://www.jetbrains.com/toolbox-app/) |

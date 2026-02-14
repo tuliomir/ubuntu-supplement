@@ -28,6 +28,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-obsidian.sh
 ./install-dropbox.sh
 ./install-sublime-text.sh
+./install-copyq.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh
