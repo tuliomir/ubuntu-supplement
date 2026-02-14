@@ -65,7 +65,8 @@ ubuntu-supplement/
 │   ├── starship.toml       # Starship prompt theme
 │   └── XCompose            # Dead key overrides for Portuguese
 └── knowledge/
-    └── jetbrains-installation.md  # Why Toolbox over Snap (dead keys)
+    ├── jetbrains-installation.md    # Why Toolbox over Snap (dead keys)
+    └── claude-sandbox-setup.md      # How to create isolated Claude Code Docker environments
 ```
 
 ## Usage
@@ -106,6 +107,7 @@ Decision records and debugging notes for non-obvious choices in this setup:
 | File | Topic |
 |------|-------|
 | [jetbrains-installation.md](knowledge/jetbrains-installation.md) | Why Toolbox instead of Snap, and how the dead keys fix works |
+| [claude-sandbox-setup.md](knowledge/claude-sandbox-setup.md) | How to create isolated Claude Code Docker environments for any repo |
 
 ## Troubleshooting desktop apps
 
