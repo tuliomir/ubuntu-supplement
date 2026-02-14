@@ -30,6 +30,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-sublime-text.sh
 ./install-copyq.sh
 ./install-docker.sh
+./install-openjdk.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh
