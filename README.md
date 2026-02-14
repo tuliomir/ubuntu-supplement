@@ -31,6 +31,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-copyq.sh` | Installs CopyQ clipboard manager via PPA |
 | `install-docker.sh` | Installs Docker Engine and Docker Compose v2, adds user to `docker` group |
 | `install-openjdk.sh` | Installs OpenJDK 21 (JDK) from Ubuntu's default repositories |
+| `install-gradle.sh` | Installs Gradle (latest) to `~/.local/lib/` with symlink in `~/.local/bin` |
 | `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
@@ -64,6 +65,7 @@ ubuntu-supplement/
 │   ├── install-copyq.sh
 │   ├── install-docker.sh
 │   ├── install-openjdk.sh
+│   ├── install-gradle.sh
 │   └── setup-autostart.sh
 ├── configs/
 │   ├── starship.toml       # Starship prompt theme
@@ -96,7 +98,7 @@ Each script is idempotent and can be run on its own:
 
 ## Notes
 
-- Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.nvm`, `~/.bun`)
+- Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.local/lib`, `~/.nvm`, `~/.bun`)
 - Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
 - Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ), Docker, and OpenJDK require `sudo` for apt/dpkg
 - Docker requires a **re-login** after install for the `docker` group to take effect
@@ -133,3 +135,4 @@ Desktop app installation methods change frequently. If a script fails, check the
 | OpenCode | [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode) |
 | Docker | [docs.docker.com/engine/install/ubuntu](https://docs.docker.com/engine/install/ubuntu/) |
 | JetBrains Toolbox | [jetbrains.com/toolbox-app](https://www.jetbrains.com/toolbox-app/) |
+| Gradle | [gradle.org/install](https://gradle.org/install/) |

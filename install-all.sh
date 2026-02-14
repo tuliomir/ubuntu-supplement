@@ -31,6 +31,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-copyq.sh
 ./install-docker.sh
 ./install-openjdk.sh
+./install-gradle.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh
