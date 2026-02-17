@@ -18,6 +18,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-gallery-dl.sh
 ./setup-jetbrains-env.sh
 ./install-jetbrains-toolbox.sh
+./install-telegram.sh
 
 # Desktop apps (sudo required)
 ./install-chrome.sh

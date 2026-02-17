@@ -20,6 +20,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-gallery-dl.sh` | Installs gallery-dl image/video downloader via pipx |
 | `setup-jetbrains-env.sh` | Fixes dead keys in JetBrains IDEs (env vars + wrapper + desktop entry patches) |
 | `install-jetbrains-toolbox.sh` | Installs JetBrains Toolbox to `~/.local/lib/` (use it to install WebStorm, IntelliJ, etc.) |
+| `install-telegram.sh` | Installs Telegram Desktop to `~/.local/lib/` (auto-updates itself) |
 | `install-chrome.sh` | Installs Google Chrome (not Chromium) via .deb |
 | `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
@@ -54,6 +55,7 @@ ubuntu-supplement/
 │   ├── install-gallery-dl.sh
 │   ├── setup-jetbrains-env.sh
 │   ├── install-jetbrains-toolbox.sh
+│   ├── install-telegram.sh
 │   ├── install-chrome.sh
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
@@ -136,3 +138,4 @@ Desktop app installation methods change frequently. If a script fails, check the
 | Docker | [docs.docker.com/engine/install/ubuntu](https://docs.docker.com/engine/install/ubuntu/) |
 | JetBrains Toolbox | [jetbrains.com/toolbox-app](https://www.jetbrains.com/toolbox-app/) |
 | Gradle | [gradle.org/install](https://gradle.org/install/) |
+| Telegram Desktop | [desktop.telegram.org](https://desktop.telegram.org/) |
