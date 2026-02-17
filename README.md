@@ -30,6 +30,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-dropbox.sh` | Installs Dropbox via .deb (Ubuntu 22.10+ version) |
 | `install-sublime-text.sh` | Installs Sublime Text via apt repo |
 | `install-copyq.sh` | Installs CopyQ clipboard manager via PPA |
+| `install-filezilla.sh` | Installs FileZilla FTP client via apt |
 | `install-docker.sh` | Installs Docker Engine and Docker Compose v2, adds user to `docker` group |
 | `install-openjdk.sh` | Installs OpenJDK 21 (JDK) from Ubuntu's default repositories |
 | `install-gradle.sh` | Installs Gradle (latest) to `~/.local/lib/` with symlink in `~/.local/bin` |
@@ -65,6 +66,7 @@ ubuntu-supplement/
 │   ├── install-dropbox.sh
 │   ├── install-sublime-text.sh
 │   ├── install-copyq.sh
+│   ├── install-filezilla.sh
 │   ├── install-docker.sh
 │   ├── install-openjdk.sh
 │   ├── install-gradle.sh
@@ -102,7 +104,7 @@ Each script is idempotent and can be run on its own:
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.local/lib`, `~/.nvm`, `~/.bun`)
 - Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
-- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ), Docker, and OpenJDK require `sudo` for apt/dpkg
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ, FileZilla), Docker, and OpenJDK require `sudo` for apt/dpkg
 - Docker requires a **re-login** after install for the `docker` group to take effect
 - JetBrains IDEs (WebStorm, IntelliJ, etc.) are installed via Toolbox, **not** snap — snap has environment isolation issues that break dead keys with `us+intl` layout (see [knowledge/jetbrains-installation.md](knowledge/jetbrains-installation.md))
 - After Toolbox is installed, re-run `setup-jetbrains-env.sh` to patch its `.desktop` entries to use the dead keys wrapper

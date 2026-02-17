@@ -30,6 +30,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-dropbox.sh
 ./install-sublime-text.sh
 ./install-copyq.sh
+./install-filezilla.sh
 ./install-docker.sh
 ./install-openjdk.sh
 ./install-gradle.sh
