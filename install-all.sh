@@ -34,6 +34,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-docker.sh
 ./install-openjdk.sh
 ./install-gradle.sh
+./install-tailscale.sh
 
 # Autostart configuration (after apps are installed)
 ./setup-autostart.sh
