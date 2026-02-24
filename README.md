@@ -8,7 +8,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 |---|---|
 | `setup-ssh.sh` | Generates an Ed25519 SSH key for GitHub |
 | `install-gh.sh` | Installs the GitHub CLI (`gh`) to `~/.local/bin` |
-| `setup-git.sh` | Sets `pull.rebase = true` globally |
+| `setup-git.sh` | Sets git identity (from env vars), default branch, and `pull.rebase = true` |
 | `setup-keyboard.sh` | US International dead keys + `' + c` = `ç` via XCompose |
 | `setup-hotkeys.sh` | Custom hotkeys: `Super+E` → Downloads, `Super+R` → text editor, `Super+Shift+R` → Sublime Text |
 | `setup-starship.sh` | Installs Starship prompt with a custom theme |
@@ -86,7 +86,7 @@ ubuntu-supplement/
 ```bash
 git clone git@github.com:tuliomir/ubuntu-supplement.git
 cd ubuntu-supplement
-./install-all.sh
+GIT_USER_NAME='Your Name' GIT_USER_EMAIL='you@example.com' ./install-all.sh
 ```
 
 After the script finishes:
