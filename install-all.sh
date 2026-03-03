@@ -25,6 +25,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-1password.sh
 ./install-ghostty.sh
 ./install-slack.sh
+./install-discord.sh
 ./install-gitify.sh
 ./install-obsidian.sh
 ./install-dropbox.sh

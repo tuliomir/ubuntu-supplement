@@ -25,6 +25,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-1password.sh` | Installs 1Password via apt repo (non-sandboxed, supports browser extensions) |
 | `install-ghostty.sh` | Installs the Ghostty terminal emulator |
 | `install-slack.sh` | Installs Slack via apt repo |
+| `install-discord.sh` | Installs Discord via .deb |
 | `install-gitify.sh` | Installs Gitify (GitHub notifications) via .deb |
 | `install-obsidian.sh` | Installs Obsidian note-taking app via .deb |
 | `install-dropbox.sh` | Installs Dropbox via .deb (Ubuntu 22.10+ version) |
@@ -62,6 +63,7 @@ ubuntu-supplement/
 │   ├── install-1password.sh
 │   ├── install-ghostty.sh
 │   ├── install-slack.sh
+│   ├── install-discord.sh
 │   ├── install-gitify.sh
 │   ├── install-obsidian.sh
 │   ├── install-dropbox.sh
@@ -106,7 +108,7 @@ Each script is idempotent and can be run on its own:
 
 - Dev tools install to user-space without `sudo` (`~/.local/bin`, `~/.local/lib`, `~/.nvm`, `~/.bun`)
 - Python CLI tools are installed via `pipx`, which isolates each tool in its own venv under `~/.local/share/pipx/venvs/`
-- Desktop apps (Chrome, 1Password, Ghostty, Slack, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ, FileZilla), Docker, Tailscale, and OpenJDK require `sudo` for apt/dpkg
+- Desktop apps (Chrome, 1Password, Ghostty, Slack, Discord, Gitify, Obsidian, Dropbox, Sublime Text, CopyQ, FileZilla), Docker, Tailscale, and OpenJDK require `sudo` for apt/dpkg
 - Docker requires a **re-login** after install for the `docker` group to take effect
 - JetBrains IDEs (WebStorm, IntelliJ, etc.) are installed via Toolbox, **not** snap — snap has environment isolation issues that break dead keys with `us+intl` layout (see [knowledge/jetbrains-installation.md](knowledge/jetbrains-installation.md))
 - After Toolbox is installed, re-run `setup-jetbrains-env.sh` to patch its `.desktop` entries to use the dead keys wrapper
@@ -132,6 +134,7 @@ Desktop app installation methods change frequently. If a script fails, check the
 | 1Password | [support.1password.com](https://support.1password.com/install-linux/#get-1password-for-linux) |
 | Ghostty | [github.com/mkasberg/ghostty-ubuntu](https://github.com/mkasberg/ghostty-ubuntu) |
 | Slack | [slack.com/downloads/linux](https://slack.com/downloads/linux) |
+| Discord | [discord.com/download](https://discord.com/download) |
 | Gitify | [github.com/gitify-app/gitify](https://github.com/gitify-app/gitify/releases) |
 | Obsidian | [obsidian.md/download](https://obsidian.md/download) |
 | Dropbox | [dropbox.com/install-linux](https://www.dropbox.com/install-linux) |
