@@ -15,6 +15,7 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-nvm.sh` | Installs NVM + Node.js LTS (set as default) |
 | `install-bun.sh` | Installs the Bun JavaScript runtime |
 | `install-claude-code.sh` | Installs Claude Code CLI (native installer, auto-updates) |
+| `setup-claude-yolo.sh` | Adds `claude-yolo` alias that runs Claude Code with `--dangerously-skip-permissions` |
 | `install-opencode.sh` | Installs OpenCode CLI |
 | `setup-python.sh` | Installs pipx and python3-venv (Python CLI tool foundation) |
 | `install-gallery-dl.sh` | Installs gallery-dl image/video downloader via pipx |
@@ -53,6 +54,7 @@ ubuntu-supplement/
 │   ├── install-nvm.sh
 │   ├── install-bun.sh
 │   ├── install-claude-code.sh
+│   ├── setup-claude-yolo.sh
 │   ├── install-opencode.sh
 │   ├── setup-python.sh
 │   ├── install-gallery-dl.sh

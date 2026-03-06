@@ -13,6 +13,7 @@ cd "$SCRIPT_DIR/scripts"
 ./install-nvm.sh
 ./install-bun.sh
 ./install-claude-code.sh
+./setup-claude-yolo.sh
 ./install-opencode.sh
 ./setup-python.sh
 ./install-gallery-dl.sh
