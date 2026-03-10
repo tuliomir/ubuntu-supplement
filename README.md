@@ -37,6 +37,8 @@ Personal post-install scripts for Ubuntu 24. Run once on a fresh install to get 
 | `install-openjdk.sh` | Installs OpenJDK 21 (JDK) from Ubuntu's default repositories |
 | `install-gradle.sh` | Installs Gradle (latest) to `~/.local/lib/` with symlink in `~/.local/bin` |
 | `install-tailscale.sh` | Installs Tailscale VPN via apt repo |
+| `install-tmux.sh` | Installs tmux terminal multiplexer via apt |
+| `setup-tmux.sh` | Installs TPM (plugin manager) and a custom tmux config (`Ctrl-Space` prefix, vim keys) |
 | `setup-autostart.sh` | Adds 1Password, Slack, and Gitify to login autostart (minimized) |
 
 ## Project structure
@@ -76,9 +78,12 @@ ubuntu-supplement/
 │   ├── install-openjdk.sh
 │   ├── install-gradle.sh
 │   ├── install-tailscale.sh
+│   ├── install-tmux.sh
+│   ├── setup-tmux.sh
 │   └── setup-autostart.sh
 ├── configs/
 │   ├── starship.toml       # Starship prompt theme
+│   ├── tmux.conf           # tmux config (Ctrl-Space prefix, vim keys, TPM)
 │   └── XCompose            # Dead key overrides for Portuguese
 └── knowledge/
     ├── jetbrains-installation.md    # Why Toolbox over Snap (dead keys)
